@@ -1,5 +1,7 @@
 "use client"
-import { useActionState } from "react"
+
+import { useFormState } from "react-dom"
+import { useState } from "react"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -14,7 +16,8 @@ interface ContactFormProps {
 }
 
 export function ContactForm({ open, onOpenChange }: ContactFormProps) {
-  const [state, action, isPending] = useActionState(sendContactEmail, null)
+  const [state, formAction] = useFormState(sendContactEmail, null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   // Reset form when dialog closes
   const handleOpenChange = (newOpen: boolean) => {
@@ -23,6 +26,10 @@ export function ContactForm({ open, onOpenChange }: ContactFormProps) {
       // Reset the form state when closing after successful submission
       window.location.reload()
     }
+  }
+
+  const handleSubmit = () => {
+    setIsSubmitting(true)
   }
 
   return (
@@ -49,11 +56,11 @@ export function ContactForm({ open, onOpenChange }: ContactFormProps) {
             </Button>
           </div>
         ) : (
-          <form action={action} className="space-y-4">
+          <form action={formAction} onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name *</Label>
-                <Input id="name" name="name" placeholder="Your full name" required disabled={isPending} />
+                <Input id="name" name="name" placeholder="Your full name" required disabled={isSubmitting} />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email *</Label>
@@ -63,14 +70,20 @@ export function ContactForm({ open, onOpenChange }: ContactFormProps) {
                   type="email"
                   placeholder="your.email@example.com"
                   required
-                  disabled={isPending}
+                  disabled={isSubmitting}
                 />
               </div>
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="subject">Subject *</Label>
-              <Input id="subject" name="subject" placeholder="What's this about?" required disabled={isPending} />
+              <Input
+                id="subject"
+                name="subject"
+                placeholder="What's this about?"
+                required
+                disabled={isSubmitting}
+              />
             </div>
 
             <div className="space-y-2">
@@ -81,13 +94,13 @@ export function ContactForm({ open, onOpenChange }: ContactFormProps) {
                 placeholder="Tell me about your project, question, or just say hello..."
                 rows={5}
                 required
-                disabled={isPending}
+                disabled={isSubmitting}
               />
             </div>
 
             <div className="flex gap-3 pt-4">
-              <Button type="submit" disabled={isPending} className="flex-1 bg-emerald-600 hover:bg-emerald-700">
-                {isPending ? (
+              <Button type="submit" disabled={isSubmitting} className="flex-1 bg-emerald-600 hover:bg-emerald-700">
+                {isSubmitting ? (
                   <>
                     <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
                     Sending...
@@ -99,7 +112,7 @@ export function ContactForm({ open, onOpenChange }: ContactFormProps) {
                   </>
                 )}
               </Button>
-              <Button type="button" variant="outline" onClick={() => handleOpenChange(false)} disabled={isPending}>
+              <Button type="button" variant="outline" onClick={() => handleOpenChange(false)} disabled={isSubmitting}>
                 <X className="w-4 h-4 mr-2" />
                 Cancel
               </Button>
@@ -110,3 +123,4 @@ export function ContactForm({ open, onOpenChange }: ContactFormProps) {
     </Dialog>
   )
 }
+
