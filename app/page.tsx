@@ -124,7 +124,7 @@ export default function Portfolio() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 mr-2 text-emerald-600" />
-                  me.prakas95@gmail.com
+                  devopsprakas@gmail.com
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-4 h-4 mr-2 text-emerald-600" />
