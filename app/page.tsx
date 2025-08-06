@@ -124,7 +124,7 @@ export default function Portfolio() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 mr-2 text-emerald-600" />
-                  devopsprakas@gmail.com
+                  me.prakasrana@gmail.com
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-4 h-4 mr-2 text-emerald-600" />
@@ -309,7 +309,7 @@ export default function Portfolio() {
               onClick={() => setContactFormOpen(true)}
             >
               <Mail className="w-4 h-4 mr-2" />
-              me.prakas95@gmail.com
+              me.prakasrana@gmail.com
             </Button>
             <Button
               variant="outline"
