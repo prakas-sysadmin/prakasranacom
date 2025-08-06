@@ -39,7 +39,7 @@ export default function Portfolio() {
   const experiences = [
     {
       company: "ZenoCloud | ServerGuy",
-      role: "Cloud Support Engineer",
+      role: "Sr. Cloud Support Engineer",
       period: "09/2021 – present",
       location: "Noida, India",
       achievements: [
@@ -53,7 +53,7 @@ export default function Portfolio() {
     },
     {
       company: "InSync Solutions",
-      role: "Junior System Engineer",
+      role: "System Engineer",
       period: "04/2020 – 09/2021",
       location: "Kolkata, India",
       achievements: [
