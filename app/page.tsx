@@ -250,12 +250,12 @@ export default function Portfolio() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500 to-violet-500 blur-2xl opacity-30" />
-                <div className="relative w-80 h-80 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <div className="relative w-80 h-[28rem] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
                   <Image
                     src="/images/prakas-rana.jpg"
                     alt="Prakas Rana - Professional Photo"
                     width={320}
-                    height={320}
+                    height={448}
                     className="w-full h-full object-cover"
                     priority
                   />
