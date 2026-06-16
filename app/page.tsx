@@ -203,7 +203,7 @@ export default function Portfolio() {
               <h1 className="text-4xl font-bold text-white sm:text-6xl mt-4">Prakas Rana</h1>
               <p className="text-xl text-emerald-400 mt-3 font-medium">Linux & Cloud Support Engineer</p>
               <p className="text-lg text-slate-400 mt-6 leading-relaxed">
-                Cloud Support & DevOps Engineer with 7+ years of experience managing AWS infrastructure, CI/CD
+                Cloud Support & DevOps Engineer with 9+ years of experience managing AWS infrastructure, CI/CD
                 automation, and Linux-based systems. Successfully managed 300+ production servers, ensuring 99.9%
                 uptime and optimizing web performance for high-traffic platforms. Increasingly leveraging AI tools
                 like Claude, GitHub Copilot, ChatGPT/Codex, and Gemini to automate workflows, accelerate
@@ -261,7 +261,7 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-emerald-500 text-slate-950 px-4 py-2 rounded-lg shadow-lg">
-                  <span className="font-semibold">7+ Years Experience</span>
+                  <span className="font-semibold">9+ Years Experience</span>
                 </div>
               </div>
             </div>
