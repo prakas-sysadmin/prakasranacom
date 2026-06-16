@@ -234,7 +234,7 @@ export default function Portfolio() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-4 h-4 mr-2 text-emerald-400" />
-                  me.prakas95@gmail.com
+                  me.prakasrana@gmail.com
                 </div>
                 <div className="flex items-center">
                   <MapPin className="w-4 h-4 mr-2 text-emerald-400" />
@@ -451,31 +451,29 @@ export default function Portfolio() {
             solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              variant="outline"
-              className="border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white bg-transparent"
-              onClick={() => setContactFormOpen(true)}
+            <a
+              href="mailto:me.prakasrana@gmail.com?subject=Hiring%20Prakas%20Rana"
+              className="flex flex-col items-start px-6 py-4 rounded-xl border border-slate-700 bg-slate-900 hover:border-emerald-500 hover:bg-slate-800 transition-colors min-w-[200px]"
             >
-              <Mail className="w-4 h-4 mr-2" />
-              me.prakas95@gmail.com
-            </Button>
-            <Button
-              variant="outline"
-              className="border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white bg-transparent"
+              <span className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-1">Email</span>
+              <span className="text-slate-200 text-sm">me.prakasrana@gmail.com</span>
+            </a>
+            <a
+              href="tel:+917003069781"
+              className="flex flex-col items-start px-6 py-4 rounded-xl border border-slate-700 bg-slate-900 hover:border-emerald-500 hover:bg-slate-800 transition-colors min-w-[200px]"
             >
-              <Phone className="w-4 h-4 mr-2" />
-              +917003069781
-            </Button>
-            <Button
-              variant="outline"
-              className="border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white bg-transparent"
-              asChild
+              <span className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-1">Phone</span>
+              <span className="text-slate-200 text-sm">+91 7003069781</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/prakasrana/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-start px-6 py-4 rounded-xl border border-slate-700 bg-slate-900 hover:border-emerald-500 hover:bg-slate-800 transition-colors min-w-[200px]"
             >
-              <a href="https://www.linkedin.com/in/prakasrana/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-4 h-4 mr-2" />
-                LinkedIn Profile
-              </a>
-            </Button>
+              <span className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-1">LinkedIn</span>
+              <span className="text-slate-200 text-sm">linkedin.com/in/prakasrana</span>
+            </a>
           </div>
           <div className="mt-8 pt-8 border-t border-white/5 text-slate-500 text-sm">
             <p>&copy; {new Date().getFullYear()} Prakas Rana. All rights reserved.</p>
